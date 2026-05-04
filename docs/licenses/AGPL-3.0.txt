@@ -1,0 +1,11 @@
+GNU AFFERO GENERAL PUBLIC LICENSE — Version 3, 19 November 2007
+
+SPDX identifier: AGPL-3.0-or-later
+
+NOTE: Full license text omitted here due to automated content filtering during scaffolding.
+Retrieve the authoritative text from the FSF:
+
+  https://www.gnu.org/licenses/agpl-3.0.txt
+
+To complete this file, run:
+  curl -o docs/licenses/AGPL-3.0.txt https://www.gnu.org/licenses/agpl-3.0.txt

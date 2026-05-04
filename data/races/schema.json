@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/senanayake/openrun/blob/main/data/races/schema.json",
+  "title": "RaceEntry",
+  "description": "A community-contributed race entry capturing course, weather, and strategy data.",
+  "type": "object",
+  "required": ["id", "name", "distance_km", "location", "course_type", "elevation_gain_m", "elevation_loss_m", "course_notes", "segments", "bq_qualifier", "website", "last_updated", "added_by"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": "string",
+      "description": "Official race name, e.g. 'Medtronic Twin Cities Marathon'."
+    },
+    "series": {
+      "type": "string",
+      "description": "Race series or major group, e.g. 'Abbott World Marathon Majors'."
+    },
+    "distance_km": {
+      "type": "number",
+      "description": "Official race distance in kilometres."
+    },
+    "location": {
+      "type": "object",
+      "required": ["city", "country", "lat", "lng"],
+      "properties": {
+        "city": { "type": "string" },
+        "state": { "type": "string" },
+        "country": { "type": "string" },
+        "lat": { "type": "number" },
+        "lng": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+    "typical_date": {
+      "type": "string",
+      "description": "Human-readable description of when the race is typically held, e.g. 'First Sunday of October'."
+    },
+    "course_type": {
+      "type": "string",
+      "enum": ["point_to_point", "loop", "out_and_back", "multi_loop"]
+    },
+    "elevation_gain_m": {
+      "type": "number",
+      "description": "Total elevation gain in metres."
+    },
+    "elevation_loss_m": {
+      "type": "number",
+      "description": "Total elevation loss in metres."
+    },
+    "elevation_profile": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["mile", "elevation_ft"],
+        "properties": {
+          "mile": { "type": "number" },
+          "elevation_ft": { "type": "number" }
+        },
+        "additionalProperties": false
+      },
+      "description": "Elevation at each mile marker (feet), for chart rendering."
+    },
+    "avg_race_day_temp_f": {
+      "type": "number",
+      "description": "Historical average temperature at race start time, in Fahrenheit."
+    },
+    "course_notes": {
+      "type": "string",
+      "description": "Narrative description of key course sections, terrain, and strategy tips."
+    },
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "mile_start", "mile_end", "difficulty", "strategy_note"],
+        "properties": {
+          "name": { "type": "string" },
+          "mile_start": { "type": "number" },
+          "mile_end": { "type": "number" },
+          "difficulty": {
+            "type": "string",
+            "enum": ["easy", "moderate", "hard", "very_hard"]
+          },
+          "strategy_note": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "bq_qualifier": {
+      "type": "boolean",
+      "description": "Whether this race is a Boston Marathon qualifier."
+    },
+    "website": {
+      "type": "string",
+      "format": "uri"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "added_by": {
+      "type": "string",
+      "description": "GitHub username of the contributor who added this entry."
+    }
+  },
+  "additionalProperties": false
+}

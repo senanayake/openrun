@@ -1,0 +1,24 @@
+{
+  "name": "@openrun/mobile",
+  "version": "0.0.1",
+  "description": "OpenRun mobile app — React Native + Expo training companion.",
+  "license": "AGPL-3.0-or-later",
+  "private": true,
+  "scripts": {
+    "dev": "expo start",
+    "build": "expo export",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@openrun/ui": "workspace:*",
+    "expo": "~51.0.0",
+    "react": "18.2.0",
+    "react-native": "0.74.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,35 @@
+OpenRun — Copyright (c) 2026 OpenRun Contributors
+
+This project uses multiple licenses depending on the component:
+
+  packages/core        AGPL v3 (or later)
+                       Coaching algorithms — if you use this in a product or
+                       service you must publish your changes under the same license.
+
+  packages/ui          MIT
+                       React component library — use freely, keep the copyright notice.
+
+  packages/integrations  Apache 2.0
+                         Third-party connectors — use freely in commercial apps;
+                         includes an explicit patent grant.
+
+  packages/nano        AGPL v3 (or later)
+                       Watch engine — same terms as packages/core.
+
+  apps/web             AGPL v3 (or later)
+                       Reference web app — running it as a service requires sharing source.
+
+  apps/mobile          AGPL v3 (or later)
+                       Mobile app — same terms as apps/web.
+
+  data/research        CC BY 4.0
+                       Peer-reviewed running science index — use freely, give attribution.
+
+  data/races           ODbL 1.0
+                       Community race database — derived databases must stay open.
+
+Full license texts are in docs/licenses/.
+A plain-English explanation of what each license means for you is in docs/licenses/PLAIN-ENGLISH.md.
+
+For commercial licensing enquiries (use of packages/core or packages/nano in a closed-source
+product), open an issue tagged "commercial-license" on GitHub.

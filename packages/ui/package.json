@@ -1,0 +1,23 @@
+{
+  "name": "@openrun/ui",
+  "version": "0.0.1",
+  "description": "OpenRun React component library — pace calculators, training zone charts, and coaching UI primitives.",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.5.0"
+  }
+}

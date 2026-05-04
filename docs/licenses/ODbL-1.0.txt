@@ -1,0 +1,11 @@
+Open Database License (ODbL) Version 1.0
+
+SPDX identifier: ODbL-1.0
+
+NOTE: Full license text omitted here due to automated content filtering during scaffolding.
+Retrieve the authoritative text from the Open Data Commons:
+
+  https://opendatacommons.org/licenses/odbl/1-0/
+
+To complete this file, run:
+  curl -o docs/licenses/ODbL-1.0.txt https://opendatacommons.org/licenses/odbl/1-0/odbl-10.txt

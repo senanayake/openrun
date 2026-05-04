@@ -1,0 +1,11 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+SPDX identifier: CC-BY-4.0
+
+NOTE: Full license text omitted here due to automated content filtering during scaffolding.
+Retrieve the authoritative text from Creative Commons:
+
+  https://creativecommons.org/licenses/by/4.0/legalcode.txt
+
+To complete this file, run:
+  curl -o docs/licenses/CC-BY-4.0.txt https://creativecommons.org/licenses/by/4.0/legalcode.txt

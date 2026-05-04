@@ -1,0 +1,97 @@
+{
+  "id": "7c9f4a2b-3e1d-4f8a-b5c6-2a9d0e7f1b3c",
+  "name": "Medtronic Twin Cities Marathon",
+  "distance_km": 42.195,
+  "location": {
+    "city": "Minneapolis",
+    "state": "Minnesota",
+    "country": "USA",
+    "lat": 44.9778,
+    "lng": -93.265
+  },
+  "typical_date": "First Sunday of October",
+  "course_type": "point_to_point",
+  "elevation_gain_m": 134,
+  "elevation_loss_m": 168,
+  "avg_race_day_temp_f": 46,
+  "elevation_profile": [
+    { "mile": 0,  "elevation_ft": 830 },
+    { "mile": 1,  "elevation_ft": 845 },
+    { "mile": 2,  "elevation_ft": 850 },
+    { "mile": 3,  "elevation_ft": 862 },
+    { "mile": 4,  "elevation_ft": 855 },
+    { "mile": 5,  "elevation_ft": 840 },
+    { "mile": 6,  "elevation_ft": 828 },
+    { "mile": 7,  "elevation_ft": 822 },
+    { "mile": 8,  "elevation_ft": 830 },
+    { "mile": 9,  "elevation_ft": 845 },
+    { "mile": 10, "elevation_ft": 860 },
+    { "mile": 11, "elevation_ft": 875 },
+    { "mile": 12, "elevation_ft": 868 },
+    { "mile": 13, "elevation_ft": 858 },
+    { "mile": 13.5, "elevation_ft": 870 },
+    { "mile": 14, "elevation_ft": 855 },
+    { "mile": 15, "elevation_ft": 840 },
+    { "mile": 16, "elevation_ft": 825 },
+    { "mile": 17, "elevation_ft": 820 },
+    { "mile": 18, "elevation_ft": 830 },
+    { "mile": 19, "elevation_ft": 840 },
+    { "mile": 20, "elevation_ft": 855 },
+    { "mile": 21, "elevation_ft": 875 },
+    { "mile": 22, "elevation_ft": 890 },
+    { "mile": 23, "elevation_ft": 880 },
+    { "mile": 24, "elevation_ft": 860 },
+    { "mile": 25, "elevation_ft": 845 },
+    { "mile": 26, "elevation_ft": 835 },
+    { "mile": 26.2, "elevation_ft": 830 }
+  ],
+  "course_notes": "Point-to-point from US Bank Stadium in downtown Minneapolis to the Minnesota State Capitol in St Paul. The first half winds through Minneapolis neighbourhoods and along the Chain of Lakes before crossing into St Paul via the Mississippi River corridor. The course is net downhill overall but contains several significant climbs that catch underprepared runners late in the race. Weather in early October is typically cool and ideal for racing — overheating is rarely a factor, but headwinds along the river are common. Boston qualifier. The course record pace is achievable for well-trained runners on a good weather day.",
+  "segments": [
+    {
+      "name": "Start — US Bank Stadium to Lake Street",
+      "mile_start": 0,
+      "mile_end": 3,
+      "difficulty": "easy",
+      "strategy_note": "Flat, wide roads through downtown. Resist going out too fast in the excitement. Settle into goal pace by mile 2."
+    },
+    {
+      "name": "Chain of Lakes — Bde Maka Ska and Lake Harriet",
+      "mile_start": 3,
+      "mile_end": 10,
+      "difficulty": "moderate",
+      "strategy_note": "Rolling terrain around the lakes. Beautiful and energetic with strong crowd support. Small climbs — bank energy here rather than spending it. This is where many runners run their best miles; keep the effort even."
+    },
+    {
+      "name": "Minnehaha Parkway climb (mile 13.5)",
+      "mile_start": 13,
+      "mile_end": 14,
+      "difficulty": "hard",
+      "strategy_note": "The sneaky mid-race hill at mile 13.5 along Minnehaha Parkway surprises runners who haven't studied the course. A short but sharp climb — back off slightly on effort going up, do not try to maintain split pace. Recover on the descent before the halfway mark."
+    },
+    {
+      "name": "Mississippi River crossing into St Paul",
+      "mile_start": 14,
+      "mile_end": 18,
+      "difficulty": "moderate",
+      "strategy_note": "Exposed stretch along the river with potential headwinds. Mentally the quietest section of the course — find a group to run with if possible. Stay patient; the crowd picks up again approaching St Paul."
+    },
+    {
+      "name": "Summit Avenue — the defining miles",
+      "mile_start": 20,
+      "mile_end": 23,
+      "difficulty": "very_hard",
+      "strategy_note": "Summit Avenue is the most celebrated and feared section of Twin Cities. Three miles of gentle but relentless uphill on the longest tree-lined boulevard in the USA. Miles 20–23 on tired legs feel much harder than the grade suggests. This is where races are won and lost. Shorten your stride, stay relaxed, do not check your watch. If you still feel strong at mile 22, you can race the last four miles. If not, survive to the Capitol."
+    },
+    {
+      "name": "Final descent to the Capitol",
+      "mile_start": 23,
+      "mile_end": 26.2,
+      "difficulty": "moderate",
+      "strategy_note": "The course drops back down after Summit Avenue's peak. If you have anything left, this is the time to spend it. The Minnesota State Capitol finish is iconic — the crowd is loud and the downhill helps. Lean forward and let gravity do the work."
+    }
+  ],
+  "bq_qualifier": true,
+  "website": "https://www.tcmevents.org",
+  "last_updated": "2026-05-03",
+  "added_by": "senanayake"
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/senanayake/openrun/blob/main/data/research/schema.json",
+  "title": "ResearchEntry",
+  "description": "A peer-reviewed running science study indexed for use in OpenRun coaching decisions.",
+  "type": "object",
+  "required": ["id", "title", "authors", "year", "journal", "methodology_quality", "key_findings", "coaching_applications", "tags", "added_by", "added_date"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for this research entry."
+    },
+    "title": {
+      "type": "string",
+      "description": "Full title of the paper or study."
+    },
+    "authors": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Author names in 'Last, First' format."
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1900,
+      "maximum": 2100
+    },
+    "journal": {
+      "type": "string",
+      "description": "Journal or conference name."
+    },
+    "doi": {
+      "type": "string",
+      "description": "Digital Object Identifier, without the https://doi.org/ prefix."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Public URL to full text or abstract."
+    },
+    "methodology_quality": {
+      "type": "string",
+      "enum": ["rct", "cohort", "case_control", "meta_analysis", "expert_consensus"],
+      "description": "Study design, from strongest (meta_analysis/rct) to weakest (expert_consensus)."
+    },
+    "sample_size": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of participants."
+    },
+    "key_findings": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Bullet-point summary of what the study found."
+    },
+    "coaching_applications": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "How these findings translate into OpenRun coaching decisions or algorithm inputs."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Searchable topics, e.g. vdot, threshold, periodization, hrv, nutrition, marathon."
+    },
+    "added_by": {
+      "type": "string",
+      "description": "GitHub username of the contributor who added this entry."
+    },
+    "added_date": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 date when this entry was added (YYYY-MM-DD)."
+    }
+  },
+  "additionalProperties": false
+}

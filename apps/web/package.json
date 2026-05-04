@@ -1,0 +1,27 @@
+{
+  "name": "@openrun/web",
+  "version": "0.0.1",
+  "description": "OpenRun web dashboard — Next.js 15 training analytics and coaching interface.",
+  "license": "AGPL-3.0-or-later",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@openrun/ui": "workspace:*",
+    "next": "^15.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.5.0"
+  }
+}
