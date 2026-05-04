@@ -1,0 +1,21 @@
+{
+  "_comment": "Formula-computed golden values. Tolerance is 5%. Update after any intentional formula change.",
+  "vdot_to_race_time": [
+    {"vdot": 45.0, "distance_km": 42.195, "expected_seconds": 12444, "tolerance": 0.05},
+    {"vdot": 50.0, "distance_km": 42.195, "expected_seconds": 11400, "tolerance": 0.05},
+    {"vdot": 55.0, "distance_km": 42.195, "expected_seconds": 10500, "tolerance": 0.05},
+    {"vdot": 60.0, "distance_km": 42.195, "expected_seconds": 9780,  "tolerance": 0.05},
+    {"vdot": 45.0, "distance_km": 5.0,    "expected_seconds": 1270,  "tolerance": 0.05},
+    {"vdot": 50.0, "distance_km": 5.0,    "expected_seconds": 1200,  "tolerance": 0.05},
+    {"vdot": 55.0, "distance_km": 5.0,    "expected_seconds": 1134,  "tolerance": 0.05},
+    {"vdot": 60.0, "distance_km": 5.0,    "expected_seconds": 1073,  "tolerance": 0.05}
+  ],
+  "race_to_vdot": [
+    {"distance_km": 5.0,    "time_seconds": 1200,  "expected_vdot": 49.8, "tolerance": 0.03},
+    {"distance_km": 5.0,    "time_seconds": 1141,  "expected_vdot": 51.5, "tolerance": 0.03},
+    {"distance_km": 10.0,   "time_seconds": 2400,  "expected_vdot": 52.1, "tolerance": 0.03},
+    {"distance_km": 10.0,   "time_seconds": 2520,  "expected_vdot": 49.1, "tolerance": 0.03},
+    {"distance_km": 42.195, "time_seconds": 12600, "expected_vdot": 44.5, "tolerance": 0.03},
+    {"distance_km": 42.195, "time_seconds": 10800, "expected_vdot": 53.5, "tolerance": 0.03}
+  ]
+}
