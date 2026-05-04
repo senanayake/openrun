@@ -112,12 +112,14 @@ def build_load_history(
     ctl, atl = initial_ctl, initial_atl
     for i, tss in enumerate(daily_tss):
         ctl, atl, tsb = update_load(ctl, atl, tss)
+        ctl_r = round(ctl, 4)
+        atl_r = round(atl, 4)
         snapshots.append(
             TrainingLoadSnapshot(
                 date=start_date + timedelta(days=i),
-                ctl=round(ctl, 4),
-                atl=round(atl, 4),
-                tsb=round(tsb, 4),
+                ctl=ctl_r,
+                atl=atl_r,
+                tsb=ctl_r - atl_r,  # always exactly ctl - atl after rounding
             )
         )
     return snapshots

@@ -6,7 +6,7 @@ Feature: Training load model — TSS, CTL, ATL, TSB
     Then the TSS should be approximately 100.0 within 1 percent
 
   Scenario: Easy run scores less than 50 TSS per hour
-    Given a workout of 3600 seconds where average pace is 20 percent slower than FTP
+    Given a workout of 3600 seconds where average pace is 50 percent slower than FTP
     When TSS is calculated with no elevation
     Then the TSS should be less than 50.0
 

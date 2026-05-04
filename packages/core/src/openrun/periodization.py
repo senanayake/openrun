@@ -34,7 +34,6 @@ _PHASE_KEY_WORKOUTS: dict[TrainingPhase, list[str]] = {
     TrainingPhase.SUPPORT: ["Interval session (I-pace)", "Threshold run (T-pace)", "Long run"],
     TrainingPhase.SPECIFIC: [
         "Marathon pace long run",
-        "Hill repeats",
         "Threshold intervals",
         "Race-specific long run",
     ],

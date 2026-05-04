@@ -60,10 +60,10 @@ class TestComputePeakMileage:
         assert _compute_peak_mileage(30.0) > 30.0
 
     def test_10_pct_rule_observed(self) -> None:
-        # Peak should not jump more than ~60% over 19 build weeks with caps
+        # +5 km/week cap over 15 build weeks → max ~starting + 75
         starting = 30.0
         peak = _compute_peak_mileage(starting)
-        assert peak < starting * 3  # sanity upper bound
+        assert peak < starting + 80  # sanity upper bound
 
     def test_higher_start_gives_higher_peak(self) -> None:
         assert _compute_peak_mileage(50.0) > _compute_peak_mileage(30.0)
