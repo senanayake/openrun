@@ -19,6 +19,8 @@ interface ElevationChartProps {
 }
 
 export function ElevationChart({ profile }: ElevationChartProps) {
+  if (!profile?.length) return null
+
   const labels = profile.map(p => `${p.mile.toFixed(1)} mi`)
   const elevations = profile.map(p => p.elevation_ft)
 

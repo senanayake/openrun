@@ -35,6 +35,16 @@ test.describe('UJ1 — Onboarding', () => {
     await expect(page.getByText(/VDOT/i)).toBeVisible()
   })
 
+  test('selecting a race shows elevation chart without crashing', async ({ page }) => {
+    await page.goto('/onboarding/race')
+    // Wait for race list to load
+    await page.waitForSelector('text=/km/', { timeout: 10000 })
+    // Click first race card
+    await page.getByRole('link').first().click()
+    // Elevation chart or course map should render — no crash
+    await expect(page.getByText(/elevation|km|course/i).first()).toBeVisible()
+  })
+
   test('next button disabled before calculating VDOT', async ({ page }) => {
     await page.goto('/onboarding/fitness')
     const btn = page.getByRole('button', { name: /choose my race/i })
