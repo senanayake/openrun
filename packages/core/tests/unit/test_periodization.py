@@ -118,8 +118,9 @@ class TestHillWeekNumbers:
 
 
 class TestBuildPeriodizationPlan:
-    def test_plan_has_22_weeks(self) -> None:
-        assert len(_make_plan().weeks) == 22
+    def test_plan_has_correct_weeks(self) -> None:
+        # _RACE_DATE is 175 days away → 25 weeks
+        assert len(_make_plan().weeks) == 175 // 7
 
     def test_week_numbers_sequential(self) -> None:
         plan = _make_plan()
@@ -155,9 +156,10 @@ class TestBuildPeriodizationPlan:
             assert "Hill repeats" not in w.key_workouts
 
     def test_insufficient_weeks_raises(self) -> None:
+        # 70 days = 10 weeks < 12-week minimum
         with pytest.raises(ValueError, match="weeks"):
             build_periodization_plan(
-                race_date=date.today() + timedelta(days=100),
+                race_date=date.today() + timedelta(days=70),
                 current_date=date.today(),
                 current_weekly_mileage=30.0,
                 athlete_id=_ATHLETE_ID,

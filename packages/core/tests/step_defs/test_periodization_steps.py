@@ -46,9 +46,9 @@ def build_plan(ctx: dict) -> None:
         ctx["error"] = exc
 
 
-@then("the plan should contain exactly 22 weeks")
-def check_22_weeks(ctx: dict) -> None:
-    assert len(ctx["plan"].weeks) == 22
+@then(parsers.parse("the plan should contain exactly {n:d} weeks"))
+def check_n_weeks(ctx: dict, n: int) -> None:
+    assert len(ctx["plan"].weeks) == n
 
 
 @then(parsers.parse("weeks {start:d} through {end:d} should be in the {phase_name} phase"))
@@ -68,12 +68,12 @@ def check_recovery_week(ctx: dict, week_num: int) -> None:
     assert week.is_recovery_week
 
 
-@then(parsers.parse("week 22 mileage should be less than {pct:d} percent of peak mileage"))
-def check_taper_week22(ctx: dict, pct: int) -> None:
+@then(parsers.parse("the last week mileage should be less than {pct:d} percent of peak mileage"))
+def check_taper_last_week(ctx: dict, pct: int) -> None:
     weeks = ctx["plan"].weeks
-    peak = max(w.target_mileage for w in weeks[:19])
-    week22 = next(w for w in weeks if w.week_number == 22)
-    assert week22.target_mileage < peak * (pct / 100.0)
+    peak = max(w.target_mileage for w in weeks)
+    last_week = weeks[-1]
+    assert last_week.target_mileage < peak * (pct / 100.0)
 
 
 @then("a ValueError should be raised")
